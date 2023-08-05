@@ -1,0 +1,36 @@
+- Setup and running the project - run these commands, from main project folder  
+mvnw.cmd clean install // only required initially or changes done to pom.xml file (any of them)
+mvnw.cmd spring-boot:run -pl java-api //changes done in code - rerun spring boot app
+- Create entitites
+Book, BookUser, User
+Trade, Security, Counterparty
+Primary key in all is id
+Check on how to create + which field is foreign key connecting 2 tables
+
+- Routes/ REST endpoints required 
+1 SecurityController
+get all security
+get security by id - check id or isin as id will be auto generated
+get security by date range
+get security by user id - check - need user login done first
+get all trades done for 1 security
+create security
+update security
+delete security
+2 TradeController
+get trade by id - check - if id is to be manually given or auto generated
+get security from trade id 
+create trade
+update trade
+//maybe - get all trades
+          get trades by security traded
+3 RegisterLoginController - check how to do authentication of user in spring boot
+Auth, JWT, login with Google/ GitHub 
+4 UserController - check 
+create book
+create bookuser or assign book to 1 user
+
+1 create entity in model package
+2 create jpa repo for entity in repository package
+3 create service class using repo and jpa repo methods in service package
+4 create class in controller for the functions/ endpoints on entity - using service functions defined
