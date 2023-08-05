@@ -1,6 +1,7 @@
 package com.db.grad.javaapi.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,10 +9,10 @@ import javax.persistence.Table;
 @Table(name = "dogs")
 public class Dogs {
 
-	@Id
-	private long dogId;
+	@Idd
+	private Long dogId;
     private String name;
-    private long age;
+    private Long age;
 
     public Dogs() {
 

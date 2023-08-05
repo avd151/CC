@@ -31,7 +31,7 @@ public class DogsController {
     }
 
     @GetMapping("/dogs/{id}")
-    public ResponseEntity<Dogs> getEmployeeById(@PathVariable(value = "id") Long id)
+    public ResponseEntity<Dogs> getDogById(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {
         Dogs dogs = dogsService.findDogById(id);
         return ResponseEntity.ok().body(dogs);
